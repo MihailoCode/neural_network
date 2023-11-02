@@ -28,10 +28,10 @@ documentation:
   description:  "Neural network built out of perceptrons"      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
-  how_it_works:
+  how_it_works: |
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  how_to_test:  
+  how_to_test:  |
   "Network will generate outputs according to inputs presented and preset weights of perceptrons inputs"
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
