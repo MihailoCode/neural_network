@@ -22,39 +22,39 @@ yaml_version: 4
 #
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
-  author:       "Vasileios Titopoulos"
-  title:        "Odd even sorter"
+  author:       "Faculty of Technical Sciences Cacak, University of Kragujevac"
+  title:        "Neural network on chip"
   language:     "Verilog"
-  description:  "An odd even sorter of four 2-bit values"
+  description:  "Neural network built out of perceptrons"
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-    The sorter takes the inputs from ui_in[7:0] signals and rearranges them properly to uo_out[7:0] signals after they pass from the four internal pipeline registers. 
+    Network calculates output based on user provided input and predefined weight parameters of neural network 
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Connect a clock for the internal registers and use the inputs ui_in[7:0] to assign the values to the design. The sorted values are provided through uo_out[7:0] signals 
+      Drive inputs to [7:0] ui_in and result of computation of neural network can be obesrved on [7:0] uo_out
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:
-    - I0/In1[0]
-    - I1/In1[1]
-    - I2/In2[0]
-    - I3/In2[1]
-    - I4/In3[0]
-    - I5/In3[1]
-    - I6/In4[0]
-    - I7/In4[1]
+    - ui_in[0]
+    - ui_in[1]
+    - ui_in[2]
+    - ui_in[3]
+    - ui_in[4]
+    - ui_in[5]
+    - ui_in[6]
+    - ui_in[7]
     
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - O0/Out1[0]/segment a
-    - O1/Out1[1]/segment b
-    - O2/Out2[0]/segment c
-    - O3/Out2[1]/segment d
-    - O4/Out3[0]/segment e
-    - O5/Out3[1]/segment f
-    - O6/Out4[0]/segment g
-    - O7/Out4[1]/dot
+    - uo_out[0]
+    - uo_out[1]
+    - uo_out[2]
+    - uo_out[3]
+    - uo_out[4]
+    - uo_out[5]
+    - uo_out[6]
+    - uo_out[7]
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
     - none
@@ -66,9 +66,9 @@ documentation:
     - none
     - none
 # The following fields are optional
-  tag:          "sorter"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  tag:          "ai, neural, network"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
   external_hw:  ""      # Describe any external hardware needed
-  discord:      "vtitopou"      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
-  doc_link:     "https://github.com/Vasitito/Odd_even_sorter/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     25 000 000       # Clock frequency in Hz (if required)
-  picture:      "./figures/figure1.png"      # relative path to a picture in your repository
+  discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
+  doc_link:     "https://github.com/MihailoCode/neural_network/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     50 000 000       # Clock frequency in Hz (if required)
+  picture:      ""      # relative path to a picture in your repository
