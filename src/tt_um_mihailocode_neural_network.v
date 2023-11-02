@@ -31,6 +31,4 @@ module tt_um_mihailocode_neural_network(
     activation a6(aux6,8'd2,uo_out[5]);
     activation a7(aux7,8'd2,uo_out[6]);
     activation a8(aux8,8'd2,uo_out[7]);
-
-
 endmodule
