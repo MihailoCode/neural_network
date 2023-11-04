@@ -13,15 +13,16 @@ module tt_um_mihailocode_neural_network(
 
     assign uio_oe=8'b00000000;
     assign uio_out=8'b00000000;
+    assign uo_out[7:4]=4'b0000;
     
-    perceptron p11(ui_in[3:0],clk,8'd2,8'd4,8'd2,8'd1,8'd0,aux1);
-    perceptron p12(ui_in[3:0],clk,8'd1,8'd2,8'd3,8'd4,8'd0,aux2);
-    perceptron p13(ui_in[3:0],clk,8'd1,8'd2,8'd4,8'd2,8'd0,aux3);
-    perceptron p14(ui_in[3:0],clk,8'd1,8'd4,8'd2,8'd5,8'd0,aux4);
+    perceptron p11(ui_in[3:0],clk,4'd2,4'd4,4'd2,4'd1,4'd0,aux1);
+    perceptron p12(ui_in[3:0],clk,4'd1,4'd2,4'd3,4'd4,4'd0,aux2);
+    perceptron p13(ui_in[3:0],clk,4'd1,4'd2,4'd4,4'd2,4'd0,aux3);
+    perceptron p14(ui_in[3:0],clk,4'd1,4'd4,4'd2,4'd5,4'd0,aux4);
 
-    activation a1(aux1,8'd2,uo_out[0]);
-    activation a2(aux2,8'd2,uo_out[1]);
-    activation a3(aux3,8'd2,uo_out[2]);
-    activation a4(aux4,8'd2,uo_out[3]);
+    activation a1(aux1,4'd2,uo_out[0]);
+    activation a2(aux2,4'd2,uo_out[1]);
+    activation a3(aux3,4'd2,uo_out[2]);
+    activation a4(aux4,4'd2,uo_out[3]);
     
 endmodule
