@@ -1,7 +1,7 @@
 module activation(
 
     input [3:0] in,
-    input [7:0] treshold,
+    input [3:0] treshold,
     output reg out
 );
 
