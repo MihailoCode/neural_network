@@ -1,11 +1,11 @@
 module perceptron(
 input [3:0] in,
 input clk,
-input [7:0] weight0,
-input [7:0] weight1,
-input [7:0] weight2,
-input [7:0] weight3,
-input [7:0] bias,
+input [3:0] weight0,
+input [3:0] weight1,
+input [3:0] weight2,
+input [3:0] weight3,
+input [3:0] bias,
 output reg [3:0] out
 );
 
